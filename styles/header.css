@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url("/images/Group 1.svg");
+  background-repeat: no-repeat;
+  background-position-y: 72px;
+  color: rgba(249, 249, 249, 1);
+  font-weight: 700;
+}
+
+.content_wrapper {
+  padding: 0 116px 0px 105px;
+}
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.header-container {
+  display: flex;
+  padding-top: 61px;
+  gap: 72px;
+}
+
+.side-bar {
+  width: 243px;
+}
+
+.side-bar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 59px;
+  margin-top: 31px;
+  margin-left: 38px;
+  width: 100%;
+}
+
+.side-bar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.side-bar nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.side-bar nav ul li:active {
+  color: rgba(248, 179, 25, 1);
+}
+
+.side-bar nav h4 {
+  color: rgba(249, 249, 249, 0.67);
+  font-size: 18px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo h2 {
+  font-family: "Luckiest Guy", cursive;
+  width: 117px;
+  font-weight: 400;
+  font-size: 32px;
+  color: rgba(248, 179, 25, 1);
+}
+
+.home_icon {
+  color: rgba(249, 249, 249, 1);
+  font-size: 24px;
+}
+
+/* main-content */
+.main-content {
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.main-content nav {
+  display: flex;
+  gap: 100px;
+}
+
+.main-content nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.main-content nav ul a {
+  padding: 18px 19px;
+  font-weight: 800;
+  font-size: 24px;
+  color: rgba(249, 249, 249, 1);
+  text-decoration: none;
+  transition: all ease 0.4s;
+}
+
+.main-content nav ul a:hover,
+.main-content nav ul a:active {
+  color: rgba(248, 179, 25, 1);
+  border-bottom: 4px solid rgba(248, 179, 25, 1);
+}
+
+/* searchbox  */
+
+.search form {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 25px;
+  gap: 15px;
+  background-color: rgba(33, 36, 45, 1);
+  border: 1px solid rgba(33, 36, 45, 1);
+  border-radius: 12px;
+}
+.search form input {
+  background-color: transparent;
+  border: none;
+  color: rgba(249, 249, 249, 1);
+}
+
+.search form input:focus {
+  outline: none;
+}
+
+.search button {
+  background-color: transparent;
+  border: none;
+}
+/* carousel-container */
+
+.carousel-container {
+  width: 770px;
+  height: 350px;
+  margin-left: 68px;
+}
+
+.carousel-indicators li {
+  border-radius: 50%;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: rgba(249, 249, 249, 1) !important;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: rgba(248, 179, 25, 1) !important;
+}
+
+.carousel-inner {
+  border-radius: 20px !important;
+}
+
+.carousel-item {
+  width: 770px !important;
+  height: 350px !important;
+}
+
+.carousel-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+.carousel-indicators {
+  bottom: 36px;
+  margin-left: calc(50% - 74px / 2) !important;
+  list-style: none;
+  width: 74px;
+  padding: 8px 12px !important;
+  background-color: rgba(249, 249, 249, 0.2);
+  align-items: center !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  top: 50% !important;
+  width: 50px !important;
+  height: 50px;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  background-color: rgba(249, 249, 249, 0.2);
+}
+
+.carousel-control-next {
+  right: 20px !important;
+}
+
+.carousel-control-prev {
+  left: 20px !important;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.movie-title {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(249, 249, 249, 1);
+}
+
+.watch-list-btn,
+.watch-now-btn {
+  position: absolute;
+  bottom: 21px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.watch-list-btn:focus,
+.watch-now-btn:focus {
+  outline: none;
+}
+.watch-list-btn {
+  left: 20px;
+  padding: 19px 25px;
+  background-color: rgba(249, 249, 249, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(249, 249, 249, 1);
+  display: flex;
+}
+.watch-list-btn i {
+  font-size: 21px;
+}
+.watch-now-btn {
+  right: 20px;
+  padding: 19px 47px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(248, 179, 25, 1);
+}
