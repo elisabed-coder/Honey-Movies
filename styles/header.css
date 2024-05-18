@@ -6,19 +6,22 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+.whole-content {
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(249, 249, 249, 1);
+  font-weight: 700;
+}
 
 header {
-  background-color: rgba(0, 0, 0, 1);
   background-image: url("/images/Group 1.svg");
   background-repeat: no-repeat;
   background-position-y: 72px;
-  color: rgba(249, 249, 249, 1);
-  font-weight: 700;
 }
 
 .content_wrapper {
   padding: 0 116px 0px 105px;
 }
+
 button {
   cursor: pointer;
 }
@@ -251,4 +254,161 @@ li {
   padding: 19px 47px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(248, 179, 25, 1);
+}
+
+/* Movies section  */
+.section-wrapper {
+  margin-left: 68px;
+  margin-top: 60px;
+}
+.section-wrapper h2,
+.top-rated-movies h2 {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.movie-list {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.movie-card-1,
+.movie-card-2,
+.movie-card-3 {
+  width: 237px;
+  height: 298px;
+  border-radius: 20px;
+  padding: 21px 10px 10px 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card-1 {
+  background-image: url("/images/movies/Picture (1).svg");
+}
+
+.movie-card-2 {
+  background-image: url("/images/movies/Picture.svg");
+}
+
+.movie-card-3 {
+  background-image: url("/images/movies/Picture (2).svg");
+}
+
+.movie-card-1 h3,
+.movie-card-2 h3,
+.movie-card-3 h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.movie-card-1 p,
+.movie-card-2 p,
+.movie-card-3 p {
+  font-size: 18px;
+  color: rgba(249, 249, 249, 0.7);
+}
+
+.movie-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.add-button {
+  width: 57px;
+  height: 57px;
+  border-radius: 15px;
+  background-color: rgba(249, 249, 249, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.more-info-button {
+  width: 150px;
+  height: 57px;
+  border-radius: 15px;
+  background-color: rgba(248, 179, 25, 1);
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* top-rated-movies */
+
+.top-rated-movies {
+  margin-top: 210px;
+}
+
+.top-rated-movies h2 {
+  margin-left: 58px;
+}
+
+.top-rated-movies-list {
+  margin-left: 68px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.top-movie-card {
+  position: relative;
+  width: 320px;
+  height: 800px;
+  border-radius: 15px;
+}
+
+.top-movie-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.imdb_rating {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(248, 179, 25, 1);
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 1);
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 15px;
+}
+
+.movie-details h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.movie-details p {
+  font-size: 18px;
+  color: rgba(249, 249, 249, 0.7);
+}
+
+.movie-details p:nth-of-type(3) {
+  color: rgba(249, 249, 249, 0.9);
+}
+
+.star-rating {
+  display: flex;
+  margin-bottom: 10px; /* Space below star rating */
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc; /* Color for empty stars */
+}
+
+.star.filled {
+  color: gold !important; /* Color for filled stars */
 }
