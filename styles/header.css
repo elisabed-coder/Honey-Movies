@@ -342,32 +342,36 @@ li {
 
 .top-rated-movies {
   margin-top: 210px;
+  margin-left: 111px;
 }
 
 .top-rated-movies h2 {
-  margin-left: 58px;
+  font-size: 48px;
+  font-weight: 800;
 }
 
 .top-rated-movies-list {
-  margin-left: 68px;
-  margin-top: 70px;
+  margin-top: 66px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  gap: 50px;
+  gap: 34px;
 }
 
 .top-movie-card {
   position: relative;
-  width: 320px;
-  height: 800px;
-  border-radius: 15px;
+  width: 295px;
+  height: 580px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .top-movie-card img {
   width: 100%;
-  height: 380px;
+  height: 417px;
   object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .imdb_rating {
@@ -375,40 +379,56 @@ li {
   right: 0;
   top: 0;
   background-color: rgba(248, 179, 25, 1);
-  width: 50px;
-  height: 30px;
+  width: 77px;
+  height: 38px;
   display: flex;
   justify-content: center;
   color: rgba(0, 0, 0, 1);
   border-top-right-radius: 8px;
   border-bottom-left-radius: 15px;
+  box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+  font-size: 23px;
 }
 
 .movie-details h3 {
   font-size: 24px;
   font-weight: 800;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .movie-details p {
   font-size: 18px;
-  color: rgba(249, 249, 249, 0.7);
+  color: #f9f9f9;
 }
 
-.movie-details p:nth-of-type(3) {
-  color: rgba(249, 249, 249, 0.9);
+.movie-details p:nth-of-type(2) {
+  color: #ffff;
+  font-size: 14px;
+  margin-top: 17px;
 }
 
 .star-rating {
   display: flex;
-  margin-bottom: 10px; /* Space below star rating */
+  gap: 7px;
+  margin-top: 4px;
+
+  /* margin-bottom: 10px; Space below star rating */
 }
 
 .star {
   font-size: 24px;
-  color: #ccc; /* Color for empty stars */
+  color: #000000; /* Color for empty stars */
 }
 
 .star.filled {
   color: gold !important; /* Color for filled stars */
+}
+
+.bottom-title {
+  color: rgba(248, 179, 25, 1);
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 32px;
+  margin-top: 101px;
+  padding-bottom: 75px;
 }
