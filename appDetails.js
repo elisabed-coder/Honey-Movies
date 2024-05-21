@@ -30,7 +30,7 @@ async function displayMovieDetails() {
       <div class="headers">
       <h1>${movieData.Title}</h1>
       <p>IMDb Rating: ${movieData.imdbRating}</p>
-      <p>IMDb Rating: ${movieData.imdbVotes}</p>
+      <p>IMDb Rating: ${movieData.imdbVotes}+ views</p>
       <img src="images/imdb.svg" alt="imdb" />
       <p class="movie-plot"> ${movieData.Plot}</p>
       <div>

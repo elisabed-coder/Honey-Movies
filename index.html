@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/common.css" />
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -98,19 +99,37 @@
                   <li><a href="">TV Shows</a></li>
                   <li><a href="">Anime</a></li>
                 </ul>
-                <div class="search">
-                  <form>
+                <div class="search-container">
+                  <form class="search-element">
                     <img
                       src="images/Search....svg"
                       alt=""
                       class="search_icon"
                     />
-                    <input type="text" name="" id="" placeholder="Search" />
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="form-control"
+                      id="movie-search-box"
+                      onkeyup="findMovies()"
+                    />
 
                     <button type="submit">
                       <img src="images/Filter.svg" alt="" class="filter_icon" />
                     </button>
                   </form>
+                  <div class="search-list" id="search-list">
+                    <!-- list here -->
+                    <!-- <div class="search-list-item">
+                      <div class="search-item-thumbnail">
+                        <img src="images/bridget.jpg" alt="" />
+                      </div>
+                      <div class="search-item-info">
+                        <h3>bridget jones</h3>
+                        <p>2017</p>
+                      </div>
+                    </div> -->
+                  </div>
                 </div>
               </nav>
               <div class="carousel-container">

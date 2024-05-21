@@ -1,31 +1,40 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-}
-
 section {
   max-height: 100vh;
   max-width: 100vw;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 #movie-details-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 1px 1px 2px black; /* Add a text shadow for better readability */
   width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
   gap: 120px;
 }
+
+/* Overlay to achieve background opacity effect */
+#movie-details-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Ensure the content is above the overlay */
+#movie-details-container > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* back-home-btn */
 .back-home-btn {
   background: transparent;
