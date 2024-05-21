@@ -28,3 +28,74 @@ li {
   height: 21px;
   background-color: black;
 }
+
+.watch-list-btn,
+.watch-now-btn {
+  bottom: 21px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.watch-list-btn:focus,
+.watch-now-btn:focus {
+  outline: none;
+}
+
+.watch-list-btn {
+  left: 20px;
+  padding: 19px 25px;
+  background-color: rgba(249, 249, 249, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgba(249, 249, 249, 1);
+  display: flex;
+}
+.watch-list-btn i {
+  font-size: 21px;
+}
+.watch-now-btn {
+  right: 20px;
+  padding: 19px 47px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(248, 179, 25, 1);
+}
+
+.watch-list-btn:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+}
+
+.watch-now-btn:hover {
+  background-color: rgb(255, 157, 0);
+}
+
+/* star rating */
+.star-rating {
+  display: flex;
+  gap: 7px;
+  margin-top: 4px;
+
+  /* margin-bottom: 10px; Space below star rating */
+}
+
+.star {
+  font-size: 24px;
+  color: #000000; /* Color for empty stars */
+}
+
+.star.filled {
+  color: gold !important; /* Color for filled stars */
+}
+
+.bottom-title {
+  color: rgba(248, 179, 25, 1);
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 32px;
+  margin-top: 101px;
+  padding-bottom: 75px;
+}

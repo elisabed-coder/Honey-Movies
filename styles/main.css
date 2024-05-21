@@ -31,22 +31,61 @@ header {
   margin-top: 31px;
   margin-left: 38px;
   width: 100%;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
+.side-bar nav::-webkit-scrollbar {
+  width: 2px;
+  max-height: 10% !important;
+  cursor: pointer;
+}
+
+.side-bar nav::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.side-bar nav::-webkit-scrollbar-thumb {
+  background-color: rgba(248, 179, 25, 1);
+  outline: none;
+  border-radius: 10px;
+}
 .side-bar nav ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.side-bar nav ul li {
+.side-bar li {
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  color: rgba(249, 249, 249, 1);
+  transition: all 0.4s ease;
 }
-.side-bar nav ul li:active {
+
+.side-bar li.active,
+.side-bar li:hover {
   color: rgba(248, 179, 25, 1);
 }
+
+.side-bar li.active svg {
+  stroke: rgba(248, 179, 25, 1);
+  color: rgba(0, 0, 0, 1);
+}
+.side-bar li:hover svg {
+  fill: rgba(248, 179, 25, 1);
+  stroke: rgba(248, 179, 25, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+nav svg {
+  margin-right: 15px;
+}
+
+/* color: rgba(248, 179, 25, 1); */
 
 .side-bar nav h4 {
   color: rgba(249, 249, 249, 0.67);
@@ -65,10 +104,10 @@ header {
   color: rgba(248, 179, 25, 1);
 }
 
-.home_icon {
+/* .home_icon {
   color: rgba(249, 249, 249, 1);
   font-size: 24px;
-}
+} */
 
 /* main-content */
 .main-content {
@@ -97,9 +136,10 @@ header {
 }
 
 .main-content nav ul a:hover,
-.main-content nav ul a:active {
+.main-content nav ul a.active {
   color: rgba(248, 179, 25, 1);
   border-bottom: 4px solid rgba(248, 179, 25, 1);
+  text-decoration: none;
 }
 
 /* searchbox  */
@@ -124,6 +164,10 @@ header {
 
 .search-element input:focus {
   outline: none;
+}
+.form-control:focus {
+  outline: none;
+  background-color: rgba(33, 36, 45, 1);
 }
 
 .search-element button {
@@ -208,18 +252,18 @@ header {
 .watch-list-btn,
 .watch-now-btn {
   position: absolute;
-  bottom: 21px;
+  /* bottom: 21px;
   border: none;
   border-radius: 15px;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 18px; */
 }
 
-.watch-list-btn:focus,
+/* .watch-list-btn:focus,
 .watch-now-btn:focus {
   outline: none;
-}
-.watch-list-btn {
+} */
+/* .watch-list-btn {
   left: 20px;
   padding: 19px 25px;
   background-color: rgba(249, 249, 249, 0.2);
@@ -229,8 +273,8 @@ header {
   gap: 10px;
   color: rgba(249, 249, 249, 1);
   display: flex;
-}
-.watch-list-btn i {
+} */
+/* .watch-list-btn i {
   font-size: 21px;
 }
 .watch-now-btn {
@@ -238,7 +282,7 @@ header {
   padding: 19px 47px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(248, 179, 25, 1);
-}
+} */
 
 /* Movies section  */
 .section-wrapper {
@@ -310,6 +354,11 @@ header {
   justify-content: center;
   align-items: center;
   border: none;
+  transition: all 0.4s ease;
+}
+
+.add-button:hover {
+  background-color: rgba(183, 183, 183, 0.638);
 }
 
 .more-info-button {
@@ -320,6 +369,11 @@ header {
   color: rgba(0, 0, 0, 1);
   font-size: 18px;
   font-weight: 800;
+  transition: all 0.4s ease;
+}
+
+.more-info-button:hover {
+  background-color: rgb(255, 157, 0);
 }
 
 /* top-rated-movies */
@@ -348,6 +402,7 @@ header {
   height: 580px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  cursor: pointer;
 }
 
 .top-movie-card img {
@@ -391,41 +446,12 @@ header {
   margin-top: 17px;
 }
 
-.star-rating {
-  display: flex;
-  gap: 7px;
-  margin-top: 4px;
-
-  /* margin-bottom: 10px; Space below star rating */
-}
-
-.star {
-  font-size: 24px;
-  color: #000000; /* Color for empty stars */
-}
-
-.star.filled {
-  color: gold !important; /* Color for filled stars */
-}
-
-.bottom-title {
-  color: rgba(248, 179, 25, 1);
-  text-align: center;
-  font-family: "Luckiest Guy", cursive;
-  font-size: 32px;
-  margin-top: 101px;
-  padding-bottom: 75px;
-}
-
-/* search list */
-
 .search-list {
   position: absolute;
   z-index: 5;
   width: 305px;
   max-height: 500px;
   overflow-y: auto;
-
   background-color: #292929; /* Ensure background color is set */
 }
 

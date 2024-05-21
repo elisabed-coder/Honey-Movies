@@ -22,6 +22,16 @@ async function displayMovieDetails() {
 
   const movieData = await fetchMovieDetails(movieId);
 
+  const rating = Math.round(parseFloat(movieData.imdbRating)) / 2;
+  let starsHTML = "";
+  for (let i = 0; i < 5; i++) {
+    if (rating >= i + 1) {
+      starsHTML += '<i class="fa-solid fa-star" style="color: #FFD43B;"></i>'; // Filled star
+    } else if (rating >= i + 0.5) {
+      starsHTML +=
+        '<i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>'; // Half star
+    }
+  }
   const container = document.getElementById("movie-details-container");
   container.innerHTML = `
       <div>
@@ -29,8 +39,10 @@ async function displayMovieDetails() {
       <i class="fa-solid fa-chevron-left"></i>Back home</button>
       <div class="headers">
       <h1>${movieData.Title}</h1>
-      <p>IMDb Rating: ${movieData.imdbRating}</p>
-      <p>IMDb Rating: ${movieData.imdbVotes}+ views</p>
+      <div class="star-rating" id="star-rating" data-rating="${rating}">
+      ${starsHTML}
+    </div>
+    <p> ${movieData.imdbVotes}+ views</p>
       <img src="images/imdb.svg" alt="imdb" />
       <p class="movie-plot"> ${movieData.Plot}</p>
       <div>
