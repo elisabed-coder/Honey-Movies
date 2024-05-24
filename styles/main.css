@@ -73,7 +73,6 @@ header {
 
 .side-bar li.active svg {
   stroke: rgba(248, 179, 25, 1);
-  color: rgba(0, 0, 0, 1);
 }
 .side-bar li:hover svg {
   fill: rgba(248, 179, 25, 1);

@@ -78,8 +78,6 @@ li {
   display: flex;
   gap: 7px;
   margin-top: 4px;
-
-  /* margin-bottom: 10px; Space below star rating */
 }
 
 .star {
